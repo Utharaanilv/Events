@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <h1 class="fs-1 fw-bolder mt-5 mb-3">Slate & Crystal Events</h1>
+            <p style="text-align: justify;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea atque inventore
+                quisquam consequuntur, officia labore nobis delectus nesciunt velit totam, doloremque nihil dignissimos
+                similique, accusamus nostrum adipisci? Incidunt, repellat nisi. Lorem ipsum dolor sit, amet consectetur
+                adipisicing elit. Vitae quidem, suscipit, exercitationem eaque quae totam voluptatem dolorem quibusdam
+                molestias minus laudantium perspiciatis laboriosam quisquam, enim dolores cum maxime ipsum. Non? Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam dolore, ducimus eligendi sequi dolorum deserunt rerum accusamus odio culpa explicabo vel, recusandae similique harum error, ea cumque voluptas. Magnam, cupiditate? Lorem ipsum dolor sit amet consectetur adipisicing elit. In excepturi deleniti suscipit eligendi magni ut vero quae incidunt quasi! Omnis labore dolores placeat provident quis quo sed tempora inventore consequatur.</p>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4 mt-5">
+            <img src="https://media.istockphoto.com/id/499517325/photo/a-man-speaking-at-a-business-conference.jpg?s=612x612&w=0&k=20&c=gWTTDs_Hl6AEGOunoQ2LsjrcTJkknf9G8BGqsywyEtE="
+                width="100%" height="300px" alt="">
+        </div>
+    </div>
+
+</div>
+<div class="filter-box">
+    <mat-form-field>
+        <mat-label>-sorting-</mat-label>
+        <mat-select [formControl]="sortingControl">
+            <mat-option value="">-select</mat-option>
+            <mat-option value="id-by-asc">Id by asc</mat-option>
+
+            <mat-option value="category-by-item">category by asc</mat-option>
+            <mat-option value="category-by-desc">category with values</mat-option>
+
+        </mat-select>
+
+    </mat-form-field>
+</div>
+
+
+
+
+<div class="card-container">
+    <mat-card class="example-card" *ngFor="let item of  allEvents">
+        <mat-card-header>
+
+            <mat-card-title>RS Events</mat-card-title>
+            <mat-card-subtitle>No:{{item.id}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image [src]="item.image" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+
+            <mat-list role="list">
+                <mat-list-item role="listitem">Event Name:{{item.name}}</mat-list-item>
+                <mat-list-item role="listitem">Location:{{item.location}}</mat-list-item>
+                <mat-list-item role="listitem">Category:{{item.category}}</mat-list-item>
+                <mat-list-item role="listitem">Date:{{item.date}}</mat-list-item>
+                <mat-list-item role="listitem">Popularity:{{item.popularity}}</mat-list-item>
+            </mat-list>
+
+        </mat-card-content>
+
+    </mat-card>
+</div>
